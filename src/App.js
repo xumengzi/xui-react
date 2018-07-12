@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Toast from './assets/toast';
+import Slider from './assets/slider/slider';
 
 class App extends Component {
 	constructor(props){
@@ -9,14 +9,14 @@ class App extends Component {
 		this.state = {
 			time: null,
 			isShow: true,
-			list: [1,2,3,4,5],
 			area: 'please write something',
+			
 		};
 	}	
 	show(){
 		Toast({
 			msg: 'hello, world',
-			delay: 100000,
+			delay: 1000,
 			fn(){
 				console.log('over');
 			}
@@ -28,9 +28,20 @@ class App extends Component {
 		});
 	}
 	render() {
+		const options = {
+			list: [
+				'http://img.infinitynewtab.com/wallpaper/111.jpg',
+				'http://img.infinitynewtab.com/wallpaper/222.jpg',
+				'http://img.infinitynewtab.com/wallpaper/333.jpg',
+				'http://img.infinitynewtab.com/wallpaper/444.jpg'
+			],
+			isAutoPlay: true,
+			isShowDot: true,
+			isDrag: true
+		}
 		return (
 			<div className="App">
-				<button onClick={() => { this.show()}}>click</button>
+				<Slider options={options}/>
 			</div>
 		)
 	}
