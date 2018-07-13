@@ -16,6 +16,11 @@ class Slider extends Component{
 		}
 	}
 
+	imgContent = React.createRef()
+
+	_x = 0
+	_y = 0
+
 	componentDidMount() {
 		const { list, isAutoPlay, delay = 3000} = this.props.options;
 		let arr = list;
@@ -43,7 +48,15 @@ class Slider extends Component{
 			return {
 				autoTimer: setInterval(() => {this.handleChange(undefined, 1)}, delay)
 			}
-		})
+		});
+		// this.imgContent.current.addEventListener('mousedown', this.handleDown.bind(this));
+	}
+
+	componentWillUnmount(){
+		clearInterval(this.state.autoTimer);
+		this.setState({
+			autoTimer: null
+		});
 	}
 
 	handleChange(e, type){
@@ -102,23 +115,54 @@ class Slider extends Component{
 		})
 	}
 
+	handleDown(e){
+		return
+		e.stopPropagation();
+		this._x = e.clientX || e.pageX;
+		e.target.addEventListener('mousemove', this.handleMove.bind(this));
+		e.target.addEventListener('mouseup', this.handleUp.bind(this));
+	}
+
+	handleMove(e){
+		e.stopPropagation();
+		this._x = e.clientX || e.pageX;
+		let pos = -this._x + 'px';
+		console.log('move');
+		this.imgContent.current.style.cssText += `
+                                              ;transform: translate3D(${pos}, 0, 0);
+                                              webkitTransform: translate3D(${pos}, 0, 0);
+                                              mozTransform: translate3D(${pos}, 0, 0);
+                                              MsTransform: translate3D(${pos}, 0, 0);
+                                              `;
+	}
+
+	handleUp(e){
+		e.stopPropagation();
+		console.log('up');
+		e.target.removeEventListener('mousemove', this.handleMove);
+		e.target.removeEventListener('mouseup', this.handleUp);
+	}
+
 	render() {
 		const { list, isShowDot } = this.props.options;
 		return (
 			<div className="slider_container">
-				<div className="slider_content" style={{
-					transform: `translateX(-${this.state.active*100}%)`,
-					transitionDuration: `${this.state.duration}ms`
-				}}>
+				<div className="slider_content" ref={this.imgContent}
+					style={{
+						transform: `translateX(-${this.state.active*100}%)`,
+						transitionDuration: `${this.state.duration}ms`
+					}}
+					onMouseDown={e => { this.handleDown(e) }}
+				>
 					{
 						this.state.list.map((item, index) => {
 							let imgStyle = {
 								background: `url(${item}) center center / cover`
 							}
 							return(
-								<a href="javascript:void(0)" key={item.toString() + index} className="slider_url">
+								<div key={item.toString() + index} className="slider_url">
 									<div className="slider_each" style={imgStyle}></div>
-								</a>
+								</div>
 							)
 						})
 					}

@@ -1,0 +1,43 @@
+.input_content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+    -ms-flex-direction: initial;
+    flex-direction: initial;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.input_content .input_label{
+
+}
+.input_content .input_label.input_required::before{
+	content: '*';
+    color: red;
+}
+.input_content .input_target{
+    position: relative;
+    width: 200px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .37em .57em;
+    margin: .57em;
+    border: 1px solid #dbdbdb;
+    border-radius: .28em;
+    font-size: 1em;
+    line-height: 1.4;
+    outline: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.input_content .input_target.input_noinput{
+	cursor: not-allowed;
+}
+.input_content .input_target:focus{
+	border-color: #87cba3;
+}
