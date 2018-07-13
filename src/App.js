@@ -37,7 +37,7 @@ class App extends Component {
 			],
 			isAutoPlay: true,
 			isShowDot: true,
-			isDrag: true
+			delay: 3000,
 		}
 		return (
 			<div className="App">

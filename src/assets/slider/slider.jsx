@@ -17,7 +17,7 @@ class Slider extends Component{
 	}
 
 	componentDidMount() {
-		const { list, isAutoPlay} = this.props.options;
+		const { list, isAutoPlay, delay = 3000} = this.props.options;
 		let arr = list;
 		if (!arr.length) {
 			throw new Error('at least one picture');
@@ -41,7 +41,7 @@ class Slider extends Component{
 		});
 		isAutoPlay && this.setState(() => {
 			return {
-				autoTimer: setInterval(this.handleChange.bind(this, undefined, 1), 2000)
+				autoTimer: setInterval(() => {this.handleChange(undefined, 1)}, delay)
 			}
 		})
 	}
@@ -62,8 +62,8 @@ class Slider extends Component{
 			showInx = totalLength - 3;
 		}
 		this.setState(() => {
-			(currentInx === totalLength - 1) && setTimeout(this.reStore.bind(this, 1), 500);
-			(currentInx === 0) && setTimeout(this.reStore.bind(this, totalLength - 2), 500);
+			(currentInx === totalLength - 1) && setTimeout(() => {this.reStore(1)}, 500);
+			(currentInx === 0) && setTimeout(() => {this.reStore(totalLength - 2)}, 500);
 			return {
 				active: currentInx,
 				selected: showInx,
@@ -94,10 +94,10 @@ class Slider extends Component{
 	}
 
 	handleOut(){
-		const { isAutoPlay } = this.props.options;
+		const { isAutoPlay, delay = 3000 } = this.props.options;
 		isAutoPlay && this.setState(() => {
 			return {
-				autoTimer: setInterval(this.handleChange.bind(this, undefined, 1), 2000)
+				autoTimer: setInterval(() => {this.handleChange(undefined, 1)}, delay)
 			}
 		})
 	}
@@ -106,11 +106,6 @@ class Slider extends Component{
 		const { list, isShowDot } = this.props.options;
 		return (
 			<div className="slider_container">
-				<div className="show_index">
-					<button style={{display: 'none'}} onClick={e => { this.handleChange(e, -1) }}>prev</button>
-					<span> {this.state.active} </span>
-					<button style={{display: 'none'}} onClick={e => { this.handleChange(e, 1) }}>next</button>
-				</div>
 				<div className="slider_content" style={{
 					transform: `translateX(-${this.state.active*100}%)`,
 					transitionDuration: `${this.state.duration}ms`
