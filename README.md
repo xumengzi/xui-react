@@ -4,6 +4,9 @@
 
 > 提供了非常丰富的样式,组件等.
 
+#### 目前支持幻灯片,toast组件
+[slider](./src/imgs/slider.png)
+
 ## Build Setup
 
 ``` bash
