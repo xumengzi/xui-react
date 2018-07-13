@@ -20,6 +20,7 @@ class Slider extends Component{
 
 	_x = 0
 	_y = 0
+	_time = 500
 
 	componentDidMount() {
 		const { list, isAutoPlay, delay = 3000} = this.props.options;
@@ -63,6 +64,10 @@ class Slider extends Component{
 		if (this.props.options.list.length === 1) {
 			return;
 		};
+		if (+new Date() - this._time < 500) {
+			return;
+		};
+		this._time = +new Date();
 		let currentInx = this.state.active,
 			showInx = this.state.selected,
 			totalLength = this.state.length;
@@ -117,10 +122,10 @@ class Slider extends Component{
 
 	handleDown(e){
 		return
-		e.stopPropagation();
-		this._x = e.clientX || e.pageX;
-		e.target.addEventListener('mousemove', this.handleMove.bind(this));
-		e.target.addEventListener('mouseup', this.handleUp.bind(this));
+		// e.stopPropagation();
+		// this._x = e.clientX || e.pageX;
+		// e.target.addEventListener('mousemove', this.handleMove.bind(this));
+		// e.target.addEventListener('mouseup', this.handleUp.bind(this));
 	}
 
 	handleMove(e){
@@ -147,6 +152,11 @@ class Slider extends Component{
 		const { list, isShowDot } = this.props.options;
 		return (
 			<div className="slider_container">
+				<div className="show_index">
+					<button onClick={e => { this.handleChange(e, -1) }}>prev</button>
+					<span> {this.state.active} </span>
+					<button onClick={e => { this.handleChange(e, 1) }}>next</button>
+				</div>
 				<div className="slider_content" ref={this.imgContent}
 					style={{
 						transform: `translateX(-${this.state.active*100}%)`,

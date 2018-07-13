@@ -29,9 +29,11 @@ class App extends Component {
 				'http://img.infinitynewtab.com/wallpaper/111.jpg',
 				'http://img.infinitynewtab.com/wallpaper/222.jpg',
 				'http://img.infinitynewtab.com/wallpaper/333.jpg',
-				'http://img.infinitynewtab.com/wallpaper/444.jpg'
+				'http://img.infinitynewtab.com/wallpaper/444.jpg',
+				'http://img.infinitynewtab.com/wallpaper/555.jpg',
+				'http://img.infinitynewtab.com/wallpaper/666.jpg'
 			],
-			isAutoPlay: true,
+			isAutoPlay: false,
 			isShowDot: true,
 			delay: 3000,
 		}
