@@ -1,7 +1,46 @@
 .slider_container{
+    position: relative;
 	height: 300px;
 	overflow: hidden;
 	transform: translateZ(0);
+}
+.slider_container .slider_arrow{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    z-index: 99;
+    opacity: .3;
+    transform: translateY(-50%);
+    transition: opacity .2s linear;
+}
+.slider_container:hover .slider_arrow{
+    opacity: 1;
+}
+.slider_container .slider_arrow .slider_btn{
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAwBAMAAACoMpTzAAAAGFBMVEUAAABEwQBNuQBOuABNuQBNuABOugBOuQCcORKFAAAAB3RSTlMABr23QPg1EYORlQAAAElJREFUOMtjQAXOAgy4AEu4Ik451/IiXBrZysvLcWlkNC/HrVF4VOMAaCzGp9Fw0GgUwu0NRnWQ90e1jWqDlD2EyizCZR2+MhIAtY9H0LM6c/UAAAAASUVORK5CYII=) no-repeat center center;
+    background-size: initial;
+    cursor: pointer;
+}
+.slider_container .slider_arrow .slider_btn.slider_btn_left{
+    left: -100px;
+    transform: rotate(180deg);
+}
+.slider_container:hover .slider_arrow .slider_btn.slider_btn_left{
+    left: 10px;
+}
+.slider_container .slider_arrow .slider_btn.slider_btn_right{
+    right: -100px;
+}
+.slider_container:hover .slider_arrow .slider_btn.slider_btn_right{
+    right: 10px;
 }
 .slider_container .slider_content{
     width: auto;

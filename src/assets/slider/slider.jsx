@@ -149,14 +149,15 @@ class Slider extends Component{
 	}
 
 	render() {
-		const { list, isShowDot } = this.props.options;
+		const { list, isShowDot, isShowArrow } = this.props.options;
 		return (
 			<div className="slider_container">
-				<div className="show_index">
-					<button onClick={e => { this.handleChange(e, -1) }}>prev</button>
-					<span> {this.state.active} </span>
-					<button onClick={e => { this.handleChange(e, 1) }}>next</button>
+				{
+					isShowArrow && <div className="slider_arrow">
+					<span className="slider_btn slider_btn_left" onClick={e => { this.handleChange(e, -1) }}></span>
+					<span className="slider_btn slider_btn_right" onClick={e => { this.handleChange(e, 1) }}></span>
 				</div>
+				}
 				<div className="slider_content" ref={this.imgContent}
 					style={{
 						transform: `translateX(-${this.state.active*100}%)`,

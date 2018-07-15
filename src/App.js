@@ -35,6 +35,7 @@ class App extends Component {
 			],
 			isAutoPlay: false,
 			isShowDot: true,
+			isShowArrow: true,
 			delay: 3000,
 		}
 		return (
