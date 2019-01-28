@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Slider from '../../plugins/slider';
+import Slider from '../../plugins/slider/slider';
 
-export default class Slider extends Component{
+export default class slider extends Component{
     constructor(props){
         super(props);
         
