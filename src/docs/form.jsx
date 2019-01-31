@@ -8,7 +8,16 @@ export default class Test1 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            codes1: `<Button type="default">default button</Button>`
+            codes1: `<Button type="default" onClick={e => { this.show() }}>default button</Button>`,
+            codes2: `<Button type="default" disabled>disabled button</Button>`,
+            codes3: `<Button type="danger">danger button</Button>`,
+            codes4: `<Input/>`,
+            codes5: `<Input type="text" label="username"/>`,
+            codes6: `<Input type="text" label="readonly" readonly/>`,
+            codes7: `<Input type="text" label="disabled" disabled/>`,
+            codes8: `<Input type="text" label="username" required maxlength={10} placeholder="username"/>`,
+            codes9: `<Input type="password" label="password" placeholder="password"/>`,
+            codes10: ``,
         }
     }
     show(){
@@ -25,6 +34,8 @@ export default class Test1 extends Component{
                 <Button type="default" disabled>disabled button</Button>
                 <Button type="danger">danger button</Button>
                 <Codes codes={this.state.codes1}/>
+                <Codes codes={this.state.codes2}/>
+                <Codes codes={this.state.codes3}/>
                 
                 <p className="introduce">输入框<code>input</code></p>
                 <Input/>
@@ -33,6 +44,12 @@ export default class Test1 extends Component{
                 <Input type="text" label="disabled" disabled/>
                 <Input type="text" label="username" required maxlength={10} placeholder="username"/>
                 <Input type="password" label="password" placeholder="password"/>
+                <Codes codes={this.state.codes4}/>
+                <Codes codes={this.state.codes5}/>
+                <Codes codes={this.state.codes6}/>
+                <Codes codes={this.state.codes7}/>
+                <Codes codes={this.state.codes8}/>
+                <Codes codes={this.state.codes9}/>
 			</Fragment>
 		);
 	}

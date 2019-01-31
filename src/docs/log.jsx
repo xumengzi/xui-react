@@ -6,6 +6,25 @@ export default class Log extends Component{
         this.state = {
             logList: [
                 {
+                    version: 'v0.5.1',
+                    time: '2018/12/22',
+                    tag: 'bug&fix',
+                    description: `
+                        <div>1.修复路由问题</div>
+                        `,
+                    isCompatible: true
+                },
+                {
+                    version: 'v0.4.1',
+                    time: '2018/12/12',
+                    tag: 'add&fix',
+                    description: `
+                        <div>1.增加代码高亮显示</div>
+                        <div>2.修复导航栏没有高亮的问题</div>
+                        `,
+                    isCompatible: true
+                },
+                {
                     version: 'v0.3.1',
                     time: '2018/11/22',
                     tag: 'add',
@@ -56,7 +75,7 @@ export default class Log extends Component{
                             <Fragment key={item.version.toString() + Math.random().toFixed(3)}>
                                 <h3>{item.version}  <span style={{fontSize: 16}}>{item.time}</span></h3>
                                 <h5>{item.tag}：</h5>
-                                <p dangerouslySetInnerHTML={changeToHtml(item.description)}></p>
+                                <p className="log" dangerouslySetInnerHTML={changeToHtml(item.description)}></p>
                                 {
                                     item.isCompatible && <blockquote>
                                                             <p>是否兼容现有代码：是</p>

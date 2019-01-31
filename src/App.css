@@ -85,7 +85,15 @@ ul.nav li ul{
   margin-left: 2em;
   padding-left: 0;
 }
-
+ul.nav li a.highlight{
+  color: #008cff;
+}
+.log{
+  font-size: 15px;
+}
+.log *{
+  margin-bottom: 4px;
+}
 .xui-react-body{
   display: flex;
   align-items: end;

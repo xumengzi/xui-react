@@ -18,11 +18,11 @@ export default class Body extends Component{
             <div className="xui-react-body">
                 <div className="main markdown-section">
                     <Switch>
-                        <Route path="/index" component={firstpage}></Route>
-                        <Route path="/form" component={form}></Route>
-                        <Route path="/plugins" component={plugins}></Route>
-                        <Route path="/slider" component={slider}></Route>
-                        <Route path="/log" component={log}></Route>
+                        <Route path="/xui-react/index" component={firstpage}></Route>
+                        <Route path="/xui-react/form" component={form}></Route>
+                        <Route path="/xui-react/plugins" component={plugins}></Route>
+                        <Route path="/xui-react/slider" component={slider}></Route>
+                        <Route path="/xui-react/log" component={log}></Route>
                     </Switch>
                 </div>
             </div>
