@@ -14,9 +14,10 @@ export default class Body extends Component{
     }
 
     render(){
+        let isMobile = 'ontouchstart' in window;
         return(
             <div className="xui-react-body">
-                <div className="main markdown-section">
+                <div className={`main markdown-section${isMobile ? ' folded' : ''}`}>
                     <Switch>
                         <Route path="/xui-react/index" component={firstpage}></Route>
                         <Route path="/xui-react/form" component={form}></Route>

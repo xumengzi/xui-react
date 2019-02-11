@@ -40,14 +40,10 @@ export default class Nav extends Component{
         tar.querySelector('.main').classList.toggle('folded');
     }
 
-    componentWillUpdate(){
-        
-    }
-
     render(){
-        
+        let isMobile = 'ontouchstart' in window;
         return(
-            <div className="xui-react-head">
+            <div className={`xui-react-head${isMobile ? ' folded' : ''}`}>
                 <span className="fold" onClick={this.handleFold.bind(this)}></span>
                 <ul className="nav">
                     <li><a href="https://xumeng.site/" target="_blank">我的网站</a></li>

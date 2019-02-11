@@ -6,6 +6,15 @@ export default class Log extends Component{
         this.state = {
             logList: [
                 {
+                    version: 'v0.5.2',
+                    time: '2019/01/02',
+                    tag: 'bug&fix',
+                    description: `
+                        <div>1.修复手机端展示问题和一些细节优化</div>
+                        `,
+                    isCompatible: true
+                },
+                {
                     version: 'v0.5.1',
                     time: '2018/12/22',
                     tag: 'bug&fix',
@@ -64,11 +73,10 @@ export default class Log extends Component{
         return(
             <Fragment>
                 <h1>日志</h1>
-                <h6>当前版本: <span className="version">0.0.1</span></h6>
+                <h6>当前版本: <span className="version">{this.state.logList[0].version}</span></h6>
                 <blockquote>
                     <p>版本说明: 次版本号代表新增一个插件或者比较大的改动 修订版本号代表修复bug,优化之类</p>
                 </blockquote>
-
                 {
                     this.state.logList.map(item=>{
                         return(

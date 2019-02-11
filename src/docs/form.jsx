@@ -17,7 +17,6 @@ export default class Test1 extends Component{
             codes7: `<Input type="text" label="disabled" disabled/>`,
             codes8: `<Input type="text" label="username" required maxlength={10} placeholder="username"/>`,
             codes9: `<Input type="password" label="password" placeholder="password"/>`,
-            codes10: ``,
         }
     }
     show(){

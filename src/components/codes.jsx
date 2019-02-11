@@ -1,4 +1,4 @@
-import React, { Component, Fragment} from 'react'
+import React, { Component } from 'react'
 
 export default class Codes extends Component{
     constructor(props){
@@ -10,8 +10,7 @@ export default class Codes extends Component{
         reg = /([\<\>\?\/\:\[\}\{\}\'\"\-\+\=\.\(\)])+/g;
         let cc = '<code class="codes">';
         for(let i = 0; i< codes.length; i++){
-            let z = codes[i],
-                reg = /([\<\>\?\/\:\[\}\{\}\'\"\-\+\=\.\(\)])+/;
+            let z = codes[i];
             if (reg.test(z)) {
                 cc += `<span class="codes_symbol">${z}</span>`;
             } else{
