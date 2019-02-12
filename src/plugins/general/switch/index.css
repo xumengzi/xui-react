@@ -14,6 +14,7 @@
     height: 100%;
     display: inline-block;
     text-align: right;
+    font-size: 14px;
 }
 .xui-react-switch label::after{
     content: attr(data-off);
@@ -26,7 +27,7 @@
     color: #fff;
     height: 100%;
     box-sizing: border-box;
-    line-height: 100%;
+    font-size: 12px;
     padding: 0 2px;
     display: inline-block;
     text-align: right;
@@ -43,14 +44,14 @@
     display: inline-block;
     border-radius: 50%;
     background-color: #fff;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
     z-index: 2;
 }
 .xui-react-switch input:checked + label::after{
     content: attr(data-on);
     text-align: left;
-    background: #45adff;
-    border-color: #2492fc;
+    background: #4eb900;
+    border-color: #4eb900;
 }
 .xui-react-switch input:checked + label::before{
     left: 22px;

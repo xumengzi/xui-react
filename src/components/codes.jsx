@@ -7,7 +7,7 @@ export default class Codes extends Component{
 
     render(){
         let codes = this.props.codes,
-        reg = /([\<\>\?\/\:\[\}\{\}\'\"\-\+\=\.\(\)])+/g;
+        reg = /([\<\>\?\/\:\[\}\{\}\'\"\;\,\-\+\=\.\(\)])+/;
         let cc = '<code class="codes">';
         for(let i = 0; i< codes.length; i++){
             let z = codes[i];
