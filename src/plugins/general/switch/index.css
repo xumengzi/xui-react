@@ -1,0 +1,57 @@
+.xui-react-switch{
+    height: 20px;
+    margin: 2px 4px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+.xui-react-switch input{
+    display: none;
+}
+.xui-react-switch label{
+    position: relative;
+    padding-left: 44px;
+    height: 100%;
+    display: inline-block;
+    text-align: right;
+}
+.xui-react-switch label::after{
+    content: attr(data-off);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+    width: 40px;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 100%;
+    padding: 0 2px;
+    display: inline-block;
+    text-align: right;
+    background-color: #ccc;
+    z-index: 1;
+}
+.xui-react-switch label::before{
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+.xui-react-switch input:checked + label::after{
+    content: attr(data-on);
+    text-align: left;
+    background: #45adff;
+    border-color: #2492fc;
+}
+.xui-react-switch input:checked + label::before{
+    left: 22px;
+}
