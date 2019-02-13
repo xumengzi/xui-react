@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Input from '../plugins/general/input/input';
-import Button from '../plugins/general/button/button';
+import Input from '../plugins/general/input';
+import Button from '../plugins/general/button';
 import Switch from '../plugins/general/switch';
 import Toast from '../plugins/toast';
 import Codes from '../components/codes';
@@ -72,7 +72,10 @@ changeSwicth(bool){
 
                 <p className="introduce">开关<code>Switch</code></p>
                 <Switch on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
-                <Switch>none</Switch>
+                <Switch on="on" off="off" disabled>满配M4</Switch>
+                <Switch className="xumeng">none</Switch>
+                <Switch defaultChecked onChange={e => {this.changeSwicth(e)}}>open</Switch>
+                <Switch defaultChecked disabled onChange={e => {this.changeSwicth(e)}}>open</Switch>
                 <Switch on="开" off="关">支持中文</Switch>
                 <Codes codes={this.state.codes10}/>
                 <Codes codes={this.state.codes11}/>

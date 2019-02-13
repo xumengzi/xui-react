@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './input.css';
+import './index.css';
 
 export default class Input extends Component{
 	render() {

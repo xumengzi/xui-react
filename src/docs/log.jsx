@@ -6,6 +6,15 @@ export default class Log extends Component{
         this.state = {
             logList: [
                 {
+                    version: 'v0.5.4',
+                    time: '2019/01/13',
+                    tag: 'add&fix',
+                    description: `
+                        <div>1.完善swicth开关组件,详情<a href="/xui-react/form">表单系列</a>,</div>
+                        `,
+                    isCompatible: true
+                },
+                {
                     version: 'v0.5.3',
                     time: '2019/01/12',
                     tag: 'add&fix',

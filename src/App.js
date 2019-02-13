@@ -6,7 +6,7 @@ import Body from './components/body';
 class App extends Component {
 	constructor(props){
 		super(props);
-	}	
+	}
 	
 	render() {
 		return (
