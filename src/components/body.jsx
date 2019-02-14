@@ -13,6 +13,10 @@ export default class Body extends Component{
         super(props);
     }
 
+    componentDidUpdate(){
+        window.scrollTo(0,0);
+    }
+
     render(){
         let isMobile = 'ontouchstart' in window;
         return(
