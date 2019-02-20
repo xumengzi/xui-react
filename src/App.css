@@ -20,7 +20,7 @@ a:hover{
   text-decoration: underline;
 }
 code,textarea{
-  font-family: consolas;
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
 code{
     padding: .2em;

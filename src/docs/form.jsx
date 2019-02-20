@@ -19,7 +19,7 @@ export default class Test1 extends Component{
             codes8: `<Input type="text" label="username" required maxlength={10} placeholder="username"/>`,
             codes9: `<Input type="password" label="password" placeholder="password"/>`,
             codes10: `
-<Switch on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
+<Switch defaultChecked on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
 changeSwicth(bool){
     Toast({
         msg: bool + '',
@@ -27,8 +27,11 @@ changeSwicth(bool){
     });
 }
 `,
-            codes11: `<Switch>none</Switch>`,
-            codes12: `<Switch on="开" off="关">支持中文</Switch>`,
+            codes11: `<Switch on="on" off="off" disabled>没有消音的M4</Switch>`,
+            codes12: `<Switch className="xumeng">none</Switch>`,
+            codes13: `<Switch defaultChecked onChange={e => {this.changeSwicth(e)}}>open</Switch>`,
+            codes14: `<Switch defaultChecked disabled onChange={e => {this.changeSwicth(e)}}>open</Switch>`,
+            codes15: `<Switch on="开" off="关">支持中文</Switch>`,
         }
     }
     show(){
@@ -71,8 +74,8 @@ changeSwicth(bool){
                 <Codes codes={this.state.codes9}/>
 
                 <p className="introduce">开关<code>Switch</code></p>
-                <Switch on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
-                <Switch on="on" off="off" disabled>满配M4</Switch>
+                <Switch defaultChecked on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
+                <Switch on="on" off="off" disabled>没有消音的M4</Switch>
                 <Switch className="xumeng">none</Switch>
                 <Switch defaultChecked onChange={e => {this.changeSwicth(e)}}>open</Switch>
                 <Switch defaultChecked disabled onChange={e => {this.changeSwicth(e)}}>open</Switch>
@@ -80,6 +83,9 @@ changeSwicth(bool){
                 <Codes codes={this.state.codes10}/>
                 <Codes codes={this.state.codes11}/>
                 <Codes codes={this.state.codes12}/>
+                <Codes codes={this.state.codes13}/>
+                <Codes codes={this.state.codes14}/>
+                <Codes codes={this.state.codes15}/>
 			</Fragment>
 		);
 	}
