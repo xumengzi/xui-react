@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 
 export default class Codes extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         let codes = this.props.codes,
-        reg = /([\<\>\?\/\:\[\}\{\}\'\"\;\,\-\+\=\.\(\)])+/;
+        reg = /([<>?/:[}{}'";,\-\+=\.\(\)])+/;
         let cc = '<code class="codes">';
         for(let i = 0; i< codes.length; i++){
             let z = codes[i];

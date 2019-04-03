@@ -9,10 +9,6 @@ import slider from '../docs/plugins/slider';
 // log
 import log from '../docs/log';
 export default class Body extends Component{
-    constructor(props){
-        super(props);
-    }
-
     componentDidUpdate(){
         window.scrollTo(0,0);
     }

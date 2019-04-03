@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.less';
 
 export default class Switch extends Component{
-    constructor(props){
-        super(props);
-    }
 
     changeSwicth(e){
         this.props.onChange && this.props.onChange.call(null, e.target.checked);

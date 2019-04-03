@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import Toast from './toast';
 
 const content = document.createElement('div');
-// content.setAttribute('class', 'react-message');
 document.body.appendChild(content);
 const container = render(<Toast />, content);
 

@@ -6,11 +6,20 @@ export default class Log extends Component{
         this.state = {
             logList: [
                 {
+                    version: 'v0.6.4',
+                    time: '2019/03/12',
+                    tag: 'add&fix',
+                    description: `
+                        <div>1.将<code>css</code>文件改为<code>less</code>文件</div>
+                        `,
+                    isCompatible: true
+                },
+                {
                     version: 'v0.5.4',
                     time: '2019/02/13',
                     tag: 'add&fix',
                     description: `
-                        <div>1.完善swicth开关组件,详情<a href="/xui-react/form">表单系列</a>,</div>
+                        <div>1.完善<code>switch</code>开关组件,详情<a href="/xui-react/form">表单系列</a></div>
                         `,
                     isCompatible: true
                 },
@@ -19,7 +28,7 @@ export default class Log extends Component{
                     time: '2019/02/12',
                     tag: 'add&fix',
                     description: `
-                        <div>1.增加swicth开关组件,详情<a href="/xui-react/form">表单系列</a>,</div>
+                        <div>1.增加<code>switch</code>开关组件,详情<a href="/xui-react/form">表单系列</a></div>
                         <div>2.修复代码高亮显示的问题</div>
                         `,
                     isCompatible: true
