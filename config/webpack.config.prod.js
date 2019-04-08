@@ -166,7 +166,7 @@ module.exports = {
           
           
           {
-            test: /\.css$/,
+            test: /\.(css|less)$/,
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -205,6 +205,9 @@ module.exports = {
                         ],
                       },
                     },
+                    {
+                      loader: require.resolve('less-loader')
+                    }
                   ],
                 },
                 extractTextPluginOptions
