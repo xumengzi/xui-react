@@ -19,11 +19,11 @@ export default class Body extends Component{
             <div className="xui-react-body">
                 <div className={`main markdown-section${isMobile ? ' folded' : ''}`}>
                     <Switch>
-                        <Route path="/xui-react/index" component={firstpage}></Route>
-                        <Route path="/xui-react/form" component={form}></Route>
-                        <Route path="/xui-react/plugins" component={plugins}></Route>
-                        <Route path="/xui-react/slider" component={slider}></Route>
-                        <Route path="/xui-react/log" component={log}></Route>
+                        <Route path="/xui/xui-react/index" component={firstpage}></Route>
+                        <Route path="/xui/xui-react/form" component={form}></Route>
+                        <Route path="/xui/xui-react/plugins" component={plugins}></Route>
+                        <Route path="/xui/xui-react/slider" component={slider}></Route>
+                        <Route path="/xui/xui-react/log" component={log}></Route>
                     </Switch>
                 </div>
             </div>
