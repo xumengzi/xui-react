@@ -19,7 +19,7 @@ export default class Log extends Component{
                     time: '2019/02/13',
                     tag: 'add&fix',
                     description: `
-                        <div>1.完善<code>switch</code>开关组件,详情<a href="/xui/xui-react/form">表单系列</a></div>
+                        <div>1.完善<code>switch</code>开关组件,详情<a href="/xui-react/form">表单系列</a></div>
                         `,
                     isCompatible: true
                 },
@@ -28,7 +28,7 @@ export default class Log extends Component{
                     time: '2019/02/12',
                     tag: 'add&fix',
                     description: `
-                        <div>1.增加<code>switch</code>开关组件,详情<a href="/xui/xui-react/form">表单系列</a></div>
+                        <div>1.增加<code>switch</code>开关组件,详情<a href="/xui-react/form">表单系列</a></div>
                         <div>2.修复代码高亮显示的问题</div>
                         `,
                     isCompatible: true
@@ -65,28 +65,28 @@ export default class Log extends Component{
                     version: 'v0.3.1',
                     time: '2018/11/22',
                     tag: 'add',
-                    description: '<a href="/xui/xui-react/slider">幻灯片</a>',
+                    description: '<a href="/xui-react/slider">幻灯片</a>',
                     isCompatible: true
                 },
                 {
                     version: 'v0.2.1',
                     time: '2018/10/12',
                     tag: 'add',
-                    description: '<a href="/xui/xui-react/plugins">插件系列</a>',
+                    description: '<a href="/xui-react/plugins">插件系列</a>',
                     isCompatible: true
                 },
                 {
                     version: 'v0.1.1',
                     time: '2018/09/08',
                     tag: 'add',
-                    description: '<a href="/xui/xui-react/form">表单系列</a>',
+                    description: '<a href="/xui-react/form">表单系列</a>',
                     isCompatible: true
                 },
                 {
                     version: 'v0.0.1',
                     time: '2018/08/10',
                     tag: 'init',
-                    description: '1.基于vue的ui框架<a href="https://github.com/xumengzi/xui/xui-react" target="_blank">github</a>'
+                    description: '1.基于vue的ui框架<a href="https://github.com/xumengzi/xui-react" target="_blank">github</a>'
                 },
             ]
         }

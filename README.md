@@ -12,7 +12,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at http://localhost:3000/xui/xui-react/index
+# serve with hot reload at http://localhost:3000/xui-react/index
 npm run start
 
 # build for production with minification
