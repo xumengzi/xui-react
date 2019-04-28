@@ -53,7 +53,7 @@ export default class slider extends Component{
                     <li><code>isShowDot</code>是否显示幻灯片下边等小圆点</li>
                     <li><code>isShowArrow</code>是否显示幻灯片的左右箭头</li>
                     <li><code>delay</code>幻灯片播放的间隔时间，单位：ms</li> 
-                    <li>没有你想要的功能? 快联系我: <code>me@xumengzi.top</code>添加吧</li>
+                    <li>没有你想要的功能? 快联系我: <code>me@xumeng.site</code>添加吧</li>
                 </ul>
                 <h3>效果展示</h3>
                 <p>1.按照惯例, 我们先来看一个最简单配置的幻灯片</p>

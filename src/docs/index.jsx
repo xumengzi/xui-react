@@ -30,7 +30,7 @@ export default class Index extends Component{
                 </ul>
                 <h5>个人项目,如有问题还请指出,不胜感激.</h5>
                 <h5>欢迎不吝赐教</h5>
-                <h6>联系我: <em>me@xumengzi.top</em></h6>
+                <h6>联系我: <em>me@xumeng.site</em></h6>
             </Fragment>
         )
     }
