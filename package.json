@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://github.com/xumengzi/xui-react",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -48,6 +48,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -94,6 +96,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "webpack-dev-server": "^2.9.4"
