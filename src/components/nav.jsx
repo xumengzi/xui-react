@@ -10,25 +10,25 @@ export default class Nav extends Component{
             listNav: [
                 {
                     name: '首页 index',
-                    link: '/index'
+                    link: './index'
                 },
                 {
                     name: '表单系列 from',
-                    link: '/form'
+                    link: './form'
                 },
                 {
                     name: '插件系列 plugins',
-                    link: '/plugins',
+                    link: './plugins',
                     children: [
                         {
                             name: '幻灯片 slider',
-                            link: '/slider',
+                            link: './slider',
                         }
                     ]
                 },
                 {
                     name: '更新日志 log',
-                    link: '/log'
+                    link: './log'
                 },
             ]
         }
