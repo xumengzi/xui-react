@@ -10,25 +10,25 @@ export default class Nav extends Component{
             listNav: [
                 {
                     name: '首页 index',
-                    link: '/xui-react/index'
+                    link: '/index'
                 },
                 {
                     name: '表单系列 from',
-                    link: '/xui-react/form'
+                    link: '/form'
                 },
                 {
                     name: '插件系列 plugins',
-                    link: '/xui-react/plugins',
+                    link: '/plugins',
                     children: [
                         {
                             name: '幻灯片 slider',
-                            link: '/xui-react/slider',
+                            link: '/slider',
                         }
                     ]
                 },
                 {
                     name: '更新日志 log',
-                    link: '/xui-react/log'
+                    link: '/log'
                 },
             ]
         }
@@ -46,7 +46,7 @@ export default class Nav extends Component{
             <div className={`xui-react-head${isMobile ? ' folded' : ''}`}>
                 <span className="fold" onClick={this.handleFold.bind(this)}></span>
                 <ul className="nav">
-                    <li><a href="https://xumeng.site/" target="_blank" rel="noopener noreferrer">我的网站</a></li>
+                    <li><a href="https://x.xumeng.site/book" target="_blank" rel="noopener noreferrer">我的网站</a></li>
                     <li><a href="https://github.com/xumengzi/xui-react" target="blank">github</a></li>
                     {
                         this.state.listNav.map((item) =>{
