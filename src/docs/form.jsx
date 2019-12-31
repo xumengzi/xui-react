@@ -35,57 +35,58 @@ changeSwicth(bool){
         }
     }
     show(){
-		Toast({
-			msg: 'hello, world',
-			delay: 500
-		});
+      console.log(Toast)
+      Toast({
+        msg: 'hello, world',
+        delay: 500
+      });
     }
     
     changeSwicth(bool){
-        Toast({
-			msg: bool + '',
-			delay: 500
-		});
+      Toast({
+        msg: bool + '',
+        delay: 500
+      });
     }
 
 	render() {
 		return (
 			<Fragment>
-                <p className="introduce">按钮<code>button</code></p>
-                <Button type="default" onClick={e => { this.show() }}>default button</Button>
-                <Button type="default" disabled>disabled button</Button>
-                <Button type="danger">danger button</Button>
-                <Codes codes={this.state.codes1}/>
-                <Codes codes={this.state.codes2}/>
-                <Codes codes={this.state.codes3}/>
-                
-                <p className="introduce">输入框<code>input</code></p>
-                <Input/>
-                <Input type="text" label="username"/>
-                <Input type="text" label="readonly" readonly/>
-                <Input type="text" label="disabled" disabled/>
-                <Input type="text" label="username" required maxlength={10} placeholder="username"/>
-                <Input type="password" label="password" placeholder="password"/>
-                <Codes codes={this.state.codes4}/>
-                <Codes codes={this.state.codes5}/>
-                <Codes codes={this.state.codes6}/>
-                <Codes codes={this.state.codes7}/>
-                <Codes codes={this.state.codes8}/>
-                <Codes codes={this.state.codes9}/>
+        <p className="introduce">按钮<code>button</code></p>
+        <Button type="default" onClick={e => { this.show() }}>default button</Button>
+        <Button type="default" disabled>disabled button</Button>
+        <Button type="danger">danger button</Button>
+        <Codes codes={this.state.codes1}/>
+        <Codes codes={this.state.codes2}/>
+        <Codes codes={this.state.codes3}/>
+        
+        <p className="introduce">输入框<code>input</code></p>
+        <Input/>
+        <Input type="text" label="username"/>
+        <Input type="text" label="readonly" readonly/>
+        <Input type="text" label="disabled" disabled/>
+        <Input type="text" label="username" required maxlength={10} placeholder="username"/>
+        <Input type="password" label="password" placeholder="password"/>
+        <Codes codes={this.state.codes4}/>
+        <Codes codes={this.state.codes5}/>
+        <Codes codes={this.state.codes6}/>
+        <Codes codes={this.state.codes7}/>
+        <Codes codes={this.state.codes8}/>
+        <Codes codes={this.state.codes9}/>
 
-                <p className="introduce">开关<code>Switch</code></p>
-                <Switch defaultChecked on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
-                <Switch on="on" off="off" disabled>没有消音的M4</Switch>
-                <Switch className="xumeng">none</Switch>
-                <Switch defaultChecked onChange={e => {this.changeSwicth(e)}}>open</Switch>
-                <Switch defaultChecked disabled onChange={e => {this.changeSwicth(e)}}>open</Switch>
-                <Switch on="开" off="关">支持中文</Switch>
-                <Codes codes={this.state.codes10}/>
-                <Codes codes={this.state.codes11}/>
-                <Codes codes={this.state.codes12}/>
-                <Codes codes={this.state.codes13}/>
-                <Codes codes={this.state.codes14}/>
-                <Codes codes={this.state.codes15}/>
+        <p className="introduce">开关<code>Switch</code></p>
+        <Switch defaultChecked on="on" off="off" onChange={e => {this.changeSwicth(e)}}>满配M4</Switch>
+        <Switch on="on" off="off" disabled>没有消音的M4</Switch>
+        <Switch className="xumeng">none</Switch>
+        <Switch defaultChecked onChange={e => {this.changeSwicth(e)}}>open</Switch>
+        <Switch defaultChecked disabled onChange={e => {this.changeSwicth(e)}}>open</Switch>
+        <Switch on="开" off="关">支持中文</Switch>
+        <Codes codes={this.state.codes10}/>
+        <Codes codes={this.state.codes11}/>
+        <Codes codes={this.state.codes12}/>
+        <Codes codes={this.state.codes13}/>
+        <Codes codes={this.state.codes14}/>
+        <Codes codes={this.state.codes15}/>
 			</Fragment>
 		);
 	}

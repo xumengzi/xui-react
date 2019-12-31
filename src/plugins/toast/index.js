@@ -7,8 +7,8 @@ document.body.appendChild(content);
 const container = render(<Toast />, content);
 
 const toast = (opt) => {
-    opt = opt || {};
-    opt.msg && container.showToast(opt);
+  opt = opt || {};
+  opt.msg && container.showToast(opt);
 };
 
 export default toast;
