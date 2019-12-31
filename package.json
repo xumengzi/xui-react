@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://xumengzi.github.io/xui-react/build",
+  "homepage": ".",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",

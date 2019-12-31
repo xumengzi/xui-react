@@ -50,7 +50,7 @@ export default class Nav extends Component{
       <div className={`xui-react-head${isMobile ? ' folded' : ''}`}>
         <span className="fold" onClick={this.handleFold.bind(this)}></span>
         <ul className="nav">
-          <li><a href="https://x.xumeng.site/book" target="_blank" rel="noopener noreferrer">我的网站</a></li>
+          <li><a href="https://xumeng.ink/book/" target="_blank" rel="noopener noreferrer">我的网站</a></li>
           <li><a href="https://github.com/xumengzi/xui-react" target="blank">github</a></li>
           {
             this.state.listNav.map((item) =>{
