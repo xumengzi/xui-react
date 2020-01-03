@@ -10,29 +10,29 @@ export default class Nav extends Component{
       listNav: [
         {
           name: '首页 index',
-          link: '/xui-react/build/index'
+          link: '/index'
         },
         {
           name: '表单系列 from',
-          link: '/xui-react/build/form'
+          link: '/form'
         },
         {
           name: '插件系列 plugins',
-          link: '/xui-react/build/plugins',
+          link: '/plugins',
           children: [
             {
               name: '提示 toast',
-              link: '/xui-react/build/toast',
+              link: '/plugins/toast',
             },
             {
               name: '幻灯片 slider',
-              link: '/xui-react/build/slider',
+              link: '/plugins/slider',
             }
           ]
         },
         {
           name: '更新日志 log',
-          link: '/xui-react/build/log'
+          link: '/log'
         },
       ]
     }
